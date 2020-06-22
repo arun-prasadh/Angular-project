@@ -1,0 +1,22 @@
+<div>
+    <!-- Interpolation {{ Class to Template}} variable is always treated as string-->
+    Message: {{message}}<br>
+    <img src={{image}}><br>
+    <button disabled={{isValid}}>Register</button>
+    <!-- Property Binding (data type is retained)-->
+    <!-- Class to Template []-->
+    <button [disabled]="isValid">Register</button>
+
+    <label for="file">File progress:</label>
+
+    <progress id="file" max="100" value={{status}}> {{status}}% </progress>
+    <progress id="file" max="100" [value]="status"> {{status}}%</progress>
+    <!-- Event Binding(Template to Class)-->
+    Enter name : <input type="text" #uname>
+    <button (click)="clickHandler(uname.value)">
+        Send Name
+    </button><br>
+    <!-- Two way Data Binding (Template <- ->Component)-->
+   Email : <input type="email" [(ngModel)]="uemail"> 
+</div>
+

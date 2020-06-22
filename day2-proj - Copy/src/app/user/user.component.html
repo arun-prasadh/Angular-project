@@ -1,0 +1,25 @@
+<div class="container">
+<div class="card justify-content-center" style="width: 18rem;float:left">
+    <img src={{url}} 
+            alt="aboutme" width="140" height="140"  class="rounded-circle" style="margin:auto">
+    <div class="card-body ">
+        <!-- {{}} is used for binding data from component class-->
+        <h3 class=" card-title ">{{username}}<small>{{country}}</small></h3>
+        <div class="card-text" >
+            <div class="row">
+                <span><strong>Skills: </strong></span>
+                <p class="btn btn-small btn-warning" style="font-size: 0.5em;" *ngFor="let sk of skills;">{{sk}}</p>
+                <!-- <p class="btn btn-small btn-info" style="font-size: 0.5em;">Adobe CS 5.5</p>
+                <p class="btn btn-small btn-success" style="font-size: 0.5em;">Microsoft Office</p> -->
+            </div>
+            <hr>
+            <p class="text-left"><strong>Bio: </strong><br>
+           {{description}}
+            </p>
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-default">Get Profile</button>
+        </div>
+    </div>    
+</div>    
+</div>

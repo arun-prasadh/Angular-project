@@ -1,0 +1,45 @@
+<div>
+<!-- <h2 [ngClass]="{myborder:false,mybackground:true}">directives-demo works!</h2>
+<!-- Attribute Directives -->
+    <!-- <div [ngStyle]="style">
+        Sample Div - ngStyle
+    </div>
+    <div [ngClass]="{myborder:true,mybackground:true}">
+        Sample Div - ngClass
+    </div>
+    <div [appHighlight]="'red'" ><!-- [] property binding operator receives a variable by default in order to mention red is a string and not a variable use '' inside ""-->
+        <!-- Custom Attribute Directive
+    </div>
+    <p [appHighlight]="'cyan'" >
+        some paragraph
+    </p>
+    <form [appHighlight]>
+        Name <input><br>
+        Email <input>
+        <input type="submit" value="Signup">
+    </form> --> --> -->
+    <hr>
+    <h2> Structural Directives </h2>
+    <div *ngIf="status">
+        Sample div - *ngIf
+    </div>
+    <button (click)="toggleStatus()">Toggle</button><br>
+    <!-- assigning 0 to and event property is like assigning a dummy event handler-->
+    <!-- Dummy event handlers updates template variables in the template-->
+    <input type="checkbox" #feedback (change)=0> Do you want to provide Feedback ?<br>
+    <form *ngIf="feedback.checked">
+        Email : <input type="email"><br>
+        Feedback : <textarea></textarea><br>
+        <input type="submit" value="Submit Feedback">
+    </form>
+    <ul>
+        <li *ngFor="let name of names;let i = index">{{i}} ==> {{name}}</li>
+    </ul>
+    <app-user *ngFor="let user of users" 
+            uname={{user.uname}} description={{user.description}}
+            country={{user.country}}
+            [skills]="user.skills">
+        </app-user>
+            
+    
+</div>

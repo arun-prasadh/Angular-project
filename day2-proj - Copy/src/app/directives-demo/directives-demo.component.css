@@ -1,0 +1,12 @@
+.myborder{
+    border:2px solid navy;
+    box-shadow: 5px 5px skyblue;
+    width:50%;
+    height:200px;
+}   
+.mybackground{
+    background-color:skyblue;
+    color:navy;
+    width:50%;
+    height:200px;
+}
